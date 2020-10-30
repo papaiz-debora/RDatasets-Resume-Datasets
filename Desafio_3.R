@@ -44,13 +44,13 @@ hist(df$star_count)
 #LISTA DOS REPOSITÓRIOS QUE ESTAO PROXIMAS AO NUMERO MAXIMO DE STARGAZERS COUNT (POP_ALTA), PROXIMAS A MEDIA DOS COUNTS (POP_MEDIA) E PRÓXIMAS A MEDIANA DOS COUNTS (POP_MEDIANA)
 
 pop_alta <- subset(df, df$star_count >= 80000 )
-write.table(pop_alta, "Numero_max_estrelas.txt")
+write.table(pop_alta$name, "Numero_max_estrelas.txt")
 
 pop_media <- subset(df, df$star_count <= 80000 & df$star_count >=45000)
-write.table(pop_media, "Numero_medio_estrelas.txt")
+write.table(pop_media$name, "Numero_medio_estrelas.txt")
 
 pop_mediana <- subset(df, df$star_count <= 45000)
-write.table(pop_mediana, "Numero_mediano_estrelas.txt")
+write.table(pop_mediana$name, "Numero_mediano_estrelas.txt")
 
 
 
